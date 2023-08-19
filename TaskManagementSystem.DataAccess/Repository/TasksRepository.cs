@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,30 @@ namespace TaskManagementSystem.DataAccess.Repository
             _context = context;
         }
 
+       
+
         public async Task<Tasks> UpdateAsync(Tasks task)
         {
             _context.Tasks.Update(task);
             await _context.SaveChangesAsync();
             return task;
+        }
+
+        public async Task<IEnumerable<Tasks>> Search(string searchTerm)
+        {
+            return await _context.Tasks.Where(task => task.Title.ToLower().Contains(searchTerm.ToLower()) 
+            || task.Description.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Tasks>> SortByPriority()
+        {
+            return await _context.Tasks.OrderBy(task => task.Priority).ToListAsync();
+        }
+
+
+        public async Task<IEnumerable<Tasks>> SortByDueDate()
+        {
+            return await _context.Tasks.OrderBy(task => task.DueDate).ToListAsync();
         }
     }
 }

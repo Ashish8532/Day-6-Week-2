@@ -158,6 +158,59 @@ namespace TaskManagementSystem.Controllers
             return Ok(new Response { StatusCode = StatusCodes.Status200OK, Message = "Task assigned successfully." });
         }
 
+
+        [HttpGet]
+        [Route("search")]
+        public async Task<IActionResult> SearchTasks([FromQuery] string searchTerm)
+        {
+            // Fetch tasks that match the search term in their title or description
+            var tasks = await _unitOfWork.Tasks.Search(searchTerm);
+
+            var taskVm = tasks.Select(task => new TasksVM
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description,
+                Status = task.Status.ToString(),
+                DueDate = task.DueDate.Date,
+                Priority = task.Priority.ToString()
+            }).ToList();
+
+            return Ok(taskVm);
+        }
+
+        [HttpGet]
+        [Route("sort")]
+        public async Task<IActionResult> SortTasks([FromQuery] string sortBy)
+        {
+            IEnumerable<Tasks> tasks;
+
+            if (sortBy == "priority")
+            {
+                tasks = await _unitOfWork.Tasks.SortByPriority();
+            }
+            else if (sortBy == "dueDate")
+            {
+                tasks = await _unitOfWork.Tasks.SortByDueDate();
+            }
+            else
+            {
+                return BadRequest(new Response { StatusCode = StatusCodes.Status400BadRequest, Message = "Invalid sort parameter." });
+            }
+
+            var taskVm = tasks.Select(task => new TasksVM
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description,
+                Status = task.Status.ToString(),
+                DueDate = task.DueDate.Date,
+                Priority = task.Priority.ToString()
+            }).ToList();
+
+            return Ok(taskVm);
+        }
+
     }
 }
 

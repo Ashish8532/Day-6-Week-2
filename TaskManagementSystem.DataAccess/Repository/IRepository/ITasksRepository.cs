@@ -11,5 +11,8 @@ namespace TaskManagementSystem.DataAccess.Repository.IRepository
     public interface ITasksRepository : IRepository<Tasks>
     {
         Task<Tasks> UpdateAsync(Tasks task);
+        Task<IEnumerable<Tasks>> Search(string searchTerm);
+        Task<IEnumerable<Tasks>> SortByPriority();
+        Task<IEnumerable<Tasks>> SortByDueDate();
     }
 }
