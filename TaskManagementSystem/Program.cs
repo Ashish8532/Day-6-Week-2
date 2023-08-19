@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.DataAccess.Data;
+using TaskManagementSystem.DataAccess.Repository;
+using TaskManagementSystem.DataAccess.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,11 @@ var connectionStrings = builder.Configuration.GetConnectionString("DefaultConnec
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
 connectionStrings, b => b.MigrationsAssembly("TaskManagementSystem.DataAccess")));
 
+
+// For Repository and Unit of Work
+builder.Services.AddTransient<ITasksRepository, TasksRepository>();
+
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
 // For Identity
