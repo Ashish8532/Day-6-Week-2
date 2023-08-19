@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using TaskManagementSystem.DataAccess.Repository.IRepository;
@@ -15,10 +16,16 @@ namespace TaskManagementSystem.Controllers
     public class TasksController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public TasksController(IUnitOfWork unitOfWork)
+        public TasksController(IUnitOfWork unitOfWork, 
+            SignInManager<IdentityUser> signInManager, 
+            UserManager<IdentityUser> userManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
 
@@ -126,6 +133,31 @@ namespace TaskManagementSystem.Controllers
 
             return Ok(new Response { StatusCode = StatusCodes.Status200OK, Message = "Task deleted successfully." });
         }
+
+
+        [HttpPost]
+        [Route("assigntask/{id}/{UserName}")]
+        public async Task<IActionResult> AssignTask([FromRoute] int id, [FromRoute] string UserName)
+        {
+            var task = await _unitOfWork.Tasks.GetById(id);
+            if (task == null)
+            {
+                return NotFound(new Response { StatusCode = StatusCodes.Status404NotFound, Message = "Task not found." });
+            }
+
+            // Check if the user with the specified userId exists (you'll need to modify this)
+            var user = await _userManager.FindByNameAsync(UserName);
+            if (user == null)
+            {
+                return NotFound(new Response { StatusCode = StatusCodes.Status404NotFound, Message = "User not found." });
+            }
+
+            task.UserId = user.Id; // Assign the task to the specified user
+            await _unitOfWork.SaveAsync();
+
+            return Ok(new Response { StatusCode = StatusCodes.Status200OK, Message = "Task assigned successfully." });
+        }
+
     }
 }
 

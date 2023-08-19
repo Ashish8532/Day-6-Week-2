@@ -3448,19 +3448,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\ashis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Day-6-Week-2\\TaskManagementSystem\\TaskManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ashis\\Source\\Repos\\Ashish8532\\Day-6-Week-2\\TaskManagementSystem\\TaskManagementSystem.csproj",
       "projectName": "TaskManagementSystem",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\Day-6-Week-2\\TaskManagementSystem\\TaskManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\Day-6-Week-2\\TaskManagementSystem\\obj\\",
+      "projectPath": "C:\\Users\\ashis\\Source\\Repos\\Ashish8532\\Day-6-Week-2\\TaskManagementSystem\\TaskManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\ashis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ashis\\Source\\Repos\\Ashish8532\\Day-6-Week-2\\TaskManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ashis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3468,15 +3468,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\admin\\source\\repos\\Day-6-Week-2\\TaskManagementSystem.DataAccess\\TaskManagementSystem.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\admin\\source\\repos\\Day-6-Week-2\\TaskManagementSystem.DataAccess\\TaskManagementSystem.DataAccess.csproj"
+            "C:\\Users\\ashis\\Source\\Repos\\Ashish8532\\Day-6-Week-2\\TaskManagementSystem.DataAccess\\TaskManagementSystem.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ashis\\Source\\Repos\\Ashish8532\\Day-6-Week-2\\TaskManagementSystem.DataAccess\\TaskManagementSystem.DataAccess.csproj"
             }
           }
         }
@@ -3547,7 +3547,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,3 +10,15 @@ C:\Users\admin\source\repos\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\n
 C:\Users\admin\source\repos\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\refint\TaskManagementSystem.Models.dll
 C:\Users\admin\source\repos\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.pdb
 C:\Users\admin\source\repos\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\ref\TaskManagementSystem.Models.dll
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\bin\Debug\net6.0\TaskManagementSystem.Models.deps.json
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\bin\Debug\net6.0\TaskManagementSystem.Models.dll
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\bin\Debug\net6.0\TaskManagementSystem.Models.pdb
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.csproj.AssemblyReference.cache
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.AssemblyInfoInputs.cache
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.AssemblyInfo.cs
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.csproj.CoreCompileInputs.cache
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.dll
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\refint\TaskManagementSystem.Models.dll
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\TaskManagementSystem.Models.pdb
+C:\Users\ashis\Source\Repos\Ashish8532\Day-6-Week-2\TaskManagementSystem.MOdels\obj\Debug\net6.0\ref\TaskManagementSystem.Models.dll
