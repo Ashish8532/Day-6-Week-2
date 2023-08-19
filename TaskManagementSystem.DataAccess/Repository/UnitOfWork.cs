@@ -17,9 +17,12 @@ namespace TaskManagementSystem.DataAccess.Repository
         {
             _context = context;
             Tasks = new TasksRepository(_context);
+            Comments = new CommentRepository(_context);
         }
 
         public ITasksRepository Tasks { get; private set; }
+
+        public ICommentRepository Comments { get; private set; }
 
         public async Task SaveAsync()
         {

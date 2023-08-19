@@ -13,6 +13,7 @@ namespace TaskManagementSystem.DataAccess.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Tasks> Tasks { get; set; }
+        public DbSet<Comments> Comments { get; set; }
 
     }
 }

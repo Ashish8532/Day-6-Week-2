@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagementSystem.Models.Models;
 
 namespace TaskManagementSystem.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface ICommentRepository : IRepository<Comments> 
     {
-        ITasksRepository Tasks { get; }
-        ICommentRepository Comments { get; }
-
-        Task SaveAsync();
     }
 }
