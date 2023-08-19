@@ -39,11 +39,18 @@ namespace TaskManagementSystem.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
+            if (!result.Succeeded)
             {
-                return Ok(new Response { StatusCode = StatusCodes.Status200OK, Message = "User created successfully!" });
+                var errorMessage = "User creation failed! Please check user details and try again.";
+                foreach (var error in result.Errors)
+                {
+                    errorMessage += $" {error.Description}";
+                }
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new Response { StatusCode = StatusCodes.Status500InternalServerError, Message = errorMessage });
+                
             }
-            return BadRequest(new Response { StatusCode = StatusCodes.Status400BadRequest, Message = "User creation failed! Please check user details and try again." });
+            return Ok(new Response { StatusCode = StatusCodes.Status200OK, Message = "User created successfully!" });
         }
 
 

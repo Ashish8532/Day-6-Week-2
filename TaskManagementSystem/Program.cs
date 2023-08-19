@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.DataAccess.Data;
 using TaskManagementSystem.DataAccess.Repository;
 using TaskManagementSystem.DataAccess.Repository.IRepository;
+using TaskManagementSystem.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
